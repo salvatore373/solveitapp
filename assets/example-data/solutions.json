@@ -1,0 +1,23 @@
+{
+  "solutions": {
+    "a1bef185-b4df-4662-b8e0-03e094c8912b": {
+      "title": "Volunteer to save baby turtles",
+      "descriptionId": "05bccd9d-a0b8-4895-b036-aabbc78622fb",
+      "originalProblemId": "eee54800-5fb1-4074-91b6-206f0d9bc9b9",
+      "authorId": "6c9a6f75-c607-4fa0-b1e0-4fb8ceef4b55",
+      "extendedProblemsId": ["383e02f2-e4cb-46b4-96ec-4f025db815ea"],
+      "reviewsId": ["19c5bcde-488c-4b96-ac99-87c43cbef60f"],
+      "developmentFlowSteps": [
+        "step1",
+        ["step2", "step3"],
+        "step4"
+      ]
+    },
+    "7a83ff79-936f-410f-b5fb-a0b625e5b5cd": {
+      "title": "Minimize pollution by following this advices",
+      "descriptionId": "57191b36-eea0-4077-9553-ea98306c92c8",
+      "originalProblemId": "63d6f14d-803c-4f8f-8bff-4ca6860a2743",
+      "authorId": "6c9a6f75-c607-4fa0-b1e0-4fb8ceef4b55"
+    }
+  }
+}

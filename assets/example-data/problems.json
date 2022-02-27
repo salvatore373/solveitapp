@@ -1,0 +1,30 @@
+{
+  "problems": {
+    "eee54800-5fb1-4074-91b6-206f0d9bc9b9": {
+      "title": "Turtles and plastic pollution",
+      "descriptionId": "374c079f-dc02-4910-952a-5fbc6585691d",
+      "authorId": "6c9a6f75-c607-4fa0-b1e0-4fb8ceef4b55",
+      "categoriesId": [],
+      "imagesLink": [
+        "https://files.worldwildlife.org/wwfcmsprod/images/Turtle_and_Plastic/story_full_width/6sl2qxadwq_Medium_WW260730.jpg"
+      ],
+      "solutionsId": ["a1bef185-b4df-4662-b8e0-03e094c8912b"]
+    },
+    "383e02f2-e4cb-46b4-96ec-4f025db815ea": {
+      "title": "Placeholder problem",
+      "descriptionId": "44ac34de-7fcf-43d4-bfe6-5bf776ef1836",
+      "authorId": "6c9a6f75-c607-4fa0-b1e0-4fb8ceef4b55",
+      "categoriesId": [],
+      "imagesLink": [],
+      "solutionsId": ["a1bef185-b4df-4662-b8e0-03e094c8912b"]
+    },
+    "63d6f14d-803c-4f8f-8bff-4ca6860a2743": {
+      "title": "Move across the countries without polluting",
+      "descriptionId": "e976b6cb-e5b0-4abd-ad86-31b7d1affe3a",
+      "authorId": "6c9a6f75-c607-4fa0-b1e0-4fb8ceef4b55",
+      "categoriesId": [],
+      "imagesLink": ["https://www.iamat.org/blog/wp-content/uploads/2020/06/Air-pollution_722x530.jpg.png"],
+      "solutionsId": ["7a83ff79-936f-410f-b5fb-a0b625e5b5cd"]
+    }
+  }
+}

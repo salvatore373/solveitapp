@@ -1,0 +1,17 @@
+{
+  "users": {
+    "6c9a6f75-c607-4fa0-b1e0-4fb8ceef4b55": {
+      "firstName": "Salvatore",
+      "lastName": "Rago",
+      "problemsIds": [
+        "eee54800-5fb1-4074-91b6-206f0d9bc9b9",
+        "383e02f2-e4cb-46b4-96ec-4f025db815ea",
+        "63d6f14d-803c-4f8f-8bff-4ca6860a2743"
+      ],
+      "solutionsIds": [
+        "a1bef185-b4df-4662-b8e0-03e094c8912b",
+        "7a83ff79-936f-410f-b5fb-a0b625e5b5cd"
+      ]
+    }
+  }
+}

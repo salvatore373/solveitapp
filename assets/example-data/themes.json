@@ -1,0 +1,47 @@
+{
+  "themes": {
+    "5d75bbeb-7272-45bb-a493-5d8765fe8bb7": {
+      "graphNodeId": "5d75bbeb-7272-45bb-a493-5d8765fe8bb7",
+      "title": "Energy Production"
+    },
+    "cf0efda0-cffc-4616-85f6-3cd76ba4145f": {
+      "graphNodeId": "cf0efda0-cffc-4616-85f6-3cd76ba4145f",
+      "description": "Problems related to the energy that is collected from renewable resources.",
+      "problemsIds": ["63d6f14d-803c-4f8f-8bff-4ca6860a2743"],
+      "title": "Clean Energies"
+    },
+    "6f290360-9293-42c5-a37f-b6687716bf5c": {
+      "graphNodeId": "6f290360-9293-42c5-a37f-b6687716bf5c",
+      "problemsIds": ["63d6f14d-803c-4f8f-8bff-4ca6860a2743"],
+      "title": "Coal"
+    },
+    "bc4be54b-cebc-4c01-99f7-a29bd402043f": {
+      "graphNodeId": "bc4be54b-cebc-4c01-99f7-a29bd402043f",
+      "title": "Wind Turbines"
+    },
+    "136167b3-6753-4097-8a95-8b324606244b": {
+      "graphNodeId": "136167b3-6753-4097-8a95-8b324606244b",
+      "title": "Solar Panels"
+    },
+    "ef3b34a4-c4e4-4a57-ab92-71646d332ad7": {
+      "graphNodeId": "ef3b34a4-c4e4-4a57-ab92-71646d332ad7",
+      "title": "Environmental Pollution"
+    },
+    "84f1287c-a53e-4fd7-95c8-725f893a5e59": {
+      "graphNodeId": "84f1287c-a53e-4fd7-95c8-725f893a5e59",
+      "problemsIds": ["63d6f14d-803c-4f8f-8bff-4ca6860a2743"],
+      "title": "Greenhouse effect"
+    },
+    "56e6c499-d862-4e97-940a-e2e98b236d70": {
+      "graphNodeId": "56e6c499-d862-4e97-940a-e2e98b236d70",
+      "problemsIds": ["63d6f14d-803c-4f8f-8bff-4ca6860a2743"],
+      "title": "Climate Change"
+    },
+    "1d16d2dd-2a46-4eb1-b950-a916432d159d": {
+      "graphNodeId": "1d16d2dd-2a46-4eb1-b950-a916432d159d",
+      "problemsIds": ["eee54800-5fb1-4074-91b6-206f0d9bc9b9"],
+      "description": "Problems related with the industrial, agricultural and any other invasive organism that enter the oceans and have a harmful effect.",
+      "title": "Sea Pollution"
+    }
+  }
+}

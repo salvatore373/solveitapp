@@ -1,0 +1,58 @@
+{
+  "nodes": {
+    "5d75bbeb-7272-45bb-a493-5d8765fe8bb7": {
+      "title": "Energy Production",
+      "databaseId": "5d75bbeb-7272-45bb-a493-5d8765fe8bb7",
+      "parentId": "",
+      "childrenId": ["cf0efda0-cffc-4616-85f6-3cd76ba4145f", "6f290360-9293-42c5-a37f-b6687716bf5c"]
+    },
+    "cf0efda0-cffc-4616-85f6-3cd76ba4145f": {
+      "title": "Clean Energies",
+      "databaseId": "cf0efda0-cffc-4616-85f6-3cd76ba4145f",
+      "parentId": "5d75bbeb-7272-45bb-a493-5d8765fe8bb7",
+      "childrenId": ["bc4be54b-cebc-4c01-99f7-a29bd402043f", "136167b3-6753-4097-8a95-8b324606244b"]
+    },
+    "6f290360-9293-42c5-a37f-b6687716bf5c": {
+      "title": "Coal",
+      "databaseId": "6f290360-9293-42c5-a37f-b6687716bf5c",
+      "parentId": "5d75bbeb-7272-45bb-a493-5d8765fe8bb7",
+      "childrenId": [""]
+    },
+    "bc4be54b-cebc-4c01-99f7-a29bd402043f": {
+      "title": "Wind Turbines",
+      "databaseId": "bc4be54b-cebc-4c01-99f7-a29bd402043f",
+      "parentId": "cf0efda0-cffc-4616-85f6-3cd76ba4145f",
+      "childrenId": [""]
+    },
+    "136167b3-6753-4097-8a95-8b324606244b": {
+      "title": "Solar Panels",
+      "databaseId": "136167b3-6753-4097-8a95-8b324606244b",
+      "parentId": "cf0efda0-cffc-4616-85f6-3cd76ba4145f",
+      "childrenId": [""]
+    },
+    "ef3b34a4-c4e4-4a57-ab92-71646d332ad7": {
+      "title": "Environmental Pollution",
+      "databaseId": "ef3b34a4-c4e4-4a57-ab92-71646d332ad7",
+      "parentId": "",
+      "childrenId": ["84f1287c-a53e-4fd7-95c8-725f893a5e59","56e6c499-d862-4e97-940a-e2e98b236d70","1d16d2dd-2a46-4eb1-b950-a916432d159d"]
+    },
+    "84f1287c-a53e-4fd7-95c8-725f893a5e59": {
+      "title": "Greenhouse effect",
+      "databaseId": "84f1287c-a53e-4fd7-95c8-725f893a5e59",
+      "parentId": "ef3b34a4-c4e4-4a57-ab92-71646d332ad7",
+      "childrenId": [""]
+    },
+    "56e6c499-d862-4e97-940a-e2e98b236d70": {
+      "title": "Climate Change",
+      "databaseId": "56e6c499-d862-4e97-940a-e2e98b236d70",
+      "parentId": "ef3b34a4-c4e4-4a57-ab92-71646d332ad7",
+      "childrenId": [""]
+    },
+    "1d16d2dd-2a46-4eb1-b950-a916432d159d": {
+      "title": "Sea Pollution",
+      "databaseId": "1d16d2dd-2a46-4eb1-b950-a916432d159d",
+      "parentId": "ef3b34a4-c4e4-4a57-ab92-71646d332ad7",
+      "childrenId": [""]
+    }
+  }
+}
