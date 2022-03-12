@@ -35,6 +35,7 @@ class MapTheme {
   static Future<MapTheme> retrieveTheme(String id) async {
     // TODO: retrieve the theme from the server
     final node = (await TablesDatabase.instance.themesJson)[id];
+    if(node == null) print("null for id: $id");
     return MapTheme(
       id: id,
       title: node["title"],

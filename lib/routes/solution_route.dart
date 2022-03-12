@@ -72,7 +72,7 @@ class DevelopmentFlow extends StatelessWidget {
         TreeEdgeRenderer(_builder),
       ),
       builder: (Node n) {
-        final completed = (n.key?.value as int) %2 == 0; // DEBUG
+        final completed = (n.key?.value as int) % 2 == 0; // DEBUG
 
         final contentColor = completed
             ? theme.colorScheme.onPrimary
@@ -267,6 +267,13 @@ class _SolutionRouteState extends State<SolutionRoute> {
 
     return ImageAppBar(
       title: _solution.title,
+      appBarActions: [
+        IconButton(
+          onPressed: () {}, // TODO: send to solution editor route
+          icon: const Icon(Icons.edit),
+          tooltip: AppLocalizations.of(context).editSolutionPage,
+        ),
+      ],
       child: ListView(
         padding: DimensConst.routeContentPadding,
         children: [

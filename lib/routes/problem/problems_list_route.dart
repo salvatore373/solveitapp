@@ -74,7 +74,17 @@ class _ProblemsListRouteState extends State<ProblemsListRoute> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context).problemsOf + ' ${_mapTheme?.title ?? ''}'),
+        title: Text(AppLocalizations.of(context).problemsOf +
+            ' ${_mapTheme?.title ?? ''}'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              // TODO: send to problem creator route
+            },
+            icon: const Icon(Icons.add),
+            tooltip: AppLocalizations.of(context).createNewProblem,
+          ),
+        ],
       ),
       body: content,
     );

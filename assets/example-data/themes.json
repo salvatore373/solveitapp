@@ -1,5 +1,9 @@
 {
   "themes": {
+    "00000": {
+      "graphNodeId": "5d75bbeb-7272-45bb-a493-5d8765fe8bb7",
+      "title": "Category"
+    },
     "5d75bbeb-7272-45bb-a493-5d8765fe8bb7": {
       "graphNodeId": "5d75bbeb-7272-45bb-a493-5d8765fe8bb7",
       "title": "Energy Production"

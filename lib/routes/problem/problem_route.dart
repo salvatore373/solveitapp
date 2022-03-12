@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -24,10 +26,16 @@ class ProblemRoute extends StatefulWidget {
 class _ProblemRouteState extends State<ProblemRoute> {
   late Problem _problem;
 
+  static const int maxSolutionsNum = 3;
+
+  int? numSolutions;
+
   @override
   void initState() {
     super.initState();
     retrieveProblem();
+
+    numSolutions = min(maxSolutionsNum, _problem.solutionsId!.length);
   }
 
   void retrieveProblem() {
@@ -61,6 +69,7 @@ class _ProblemRouteState extends State<ProblemRoute> {
     final discussionCard = MinimalCard(
       mainText: AppLocalizations.of(context).joinDiscussion,
       iconPath: "assets/icons/slack-icon.png",
+      onTap: () {}, // TODO: send to slack page
     );
 
     final categories = TitledSection(
@@ -92,6 +101,7 @@ class _ProblemRouteState extends State<ProblemRoute> {
       mainText: AppLocalizations.of(context).lookForSolutions,
       subtitle: AppLocalizations.of(context).lookForSolutionsMsg,
       centeredText: true,
+      onTap: () {}, // TODO: send to "expand solution" route
     );
 
     Widget solutionsList;
@@ -108,9 +118,9 @@ class _ProblemRouteState extends State<ProblemRoute> {
       solutionsList = Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: List.generate(
-          _problem.solutionsId!.length,
+          numSolutions!,
           (index) {
             final solution = (_problem.solutions?[index])!;
             return Padding(
@@ -127,7 +137,17 @@ class _ProblemRouteState extends State<ProblemRoute> {
               ),
             );
           },
-        ),
+        )..addAll([
+            if (_problem.solutionsId!.length > numSolutions!)
+              TextButton(
+                onPressed: () {}, // TODO: show all the solutions
+                child: Text(AppLocalizations.of(context).seeAll),
+              ),
+            ElevatedButton(
+              onPressed: () {}, // TODO: send to solution creator route
+              child: Text(AppLocalizations.of(context).proposeSolution),
+            ),
+          ]),
       );
     }
     final solutions = TitledSection(
@@ -138,6 +158,13 @@ class _ProblemRouteState extends State<ProblemRoute> {
     return ImageAppBar(
       title: _problem.title,
       imagesUrl: _problem.imagesLink,
+      appBarActions: [
+        IconButton(
+          onPressed: () {}, // TODO: send to problem editor route
+          icon: const Icon(Icons.edit),
+          tooltip: AppLocalizations.of(context).editProblemPage,
+        ),
+      ],
       child: ListView(
         padding: DimensConst.routeContentPadding,
         children: [

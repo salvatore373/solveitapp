@@ -30,7 +30,10 @@ class _HomeRouteState extends State<HomeRoute> {
       body: Stack(
         alignment: Alignment.topCenter,
         children: [
-          const MapView(),
+          const Padding(
+            padding: EdgeInsets.only(top: 48.0 + 12.0),
+            child: MapView(),
+          ),
           searchBar,
         ],
       ),

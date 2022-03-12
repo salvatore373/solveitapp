@@ -22,5 +22,9 @@
   "problemsMap": "Problems Map",
   "searchBarHint": "Search for a problem or a theme...",
   "problemsOf": "Problems of",
-  "noProblemsMsg": "This theme still contains no problems"
+  "noProblemsMsg": "This theme still contains no problems",
+  "createNewProblem": "Create new problem",
+  "proposeSolution": "Propose Solution",
+  "editProblemPage": "Edit problem page",
+  "editSolutionPage": "Edit solution page"
 }

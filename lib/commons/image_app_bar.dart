@@ -5,12 +5,14 @@ class ImageAppBar extends StatefulWidget {
   final List<String>? imagesUrl;
   final String title;
   final Widget child;
+  final List<Widget>? appBarActions;
 
   const ImageAppBar({
     Key? key,
     required this.title,
     required this.child,
     this.imagesUrl,
+    this.appBarActions,
   }) : super(key: key);
 
   @override
@@ -45,6 +47,7 @@ class _ImageAppBarState extends State<ImageAppBar> {
                 floating: true,
                 pinned: true,
                 snap: true,
+                actions: widget.appBarActions,
                 flexibleSpace: FlexibleSpaceBar(
                   title: Text(widget.title),
                   background: Stack(

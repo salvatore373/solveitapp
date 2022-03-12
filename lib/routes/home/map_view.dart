@@ -38,6 +38,24 @@ class DescriptorBottomSheet extends StatelessWidget {
             ),
           ),
           if (themeNode != null)
+            FutureBuilder<MapTheme>(
+              future: MapTheme.retrieveTheme(themeNode!.databaseId),
+              builder:
+                  (BuildContext context, AsyncSnapshot<MapTheme> snapshot) {
+                return snapshot.hasData && snapshot.data?.description != null
+                    ? Padding(
+                      padding: DimensConst.minimumOverallPadding,
+                      child: Text(
+                          snapshot.data!.description!,
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            color: theme.colorScheme.onPrimary,
+                          ),
+                        ),
+                    )
+                    : Container();
+              },
+            ),
+          if (themeNode != null)
             Padding(
               padding: DimensConst.mediumTopPadding,
               child: MinimalDoubleButton(
@@ -111,8 +129,6 @@ class _MapViewState extends State<MapView> {
   GraphDatabase? _graphDbInstance;
   CustomNode? _selectedNode;
 
-  double _mapHeight = 350.0;
-
   @override
   void initState() {
     super.initState();
@@ -132,7 +148,6 @@ class _MapViewState extends State<MapView> {
 
     // No need of setState() because the framework always calls build after
     // a dependency changes
-    _mapHeight = MediaQuery.of(context).size.height * 2 / 3;
   }
 
   Future<void> _retrieveRoot() async {
@@ -176,26 +191,26 @@ class _MapViewState extends State<MapView> {
     if (_graph == null) {
       content = Center(
         child: CircularProgressIndicator(
-              color: Theme.of(context).colorScheme.primary,
-            ),
+          color: Theme.of(context).colorScheme.primary,
+        ),
       );
     } else {
       content = InteractiveViewer.builder(
-            panEnabled: true,
-            alignPanAxis: false,
-            scaleEnabled: true,
-            minScale: 2.5,
-            maxScale: 2.5,
-            builder: (BuildContext context, Quad viewport) {
-              return GraphView(
-                graph: _graph!,
-                algorithm: BuchheimWalkerAlgorithm(
-                  _builder!,
-                  TreeEdgeRenderer(_builder!),
-                ),
-                builder: _buildNode,
-              );
-            });
+          panEnabled: true,
+          alignPanAxis: false,
+          scaleEnabled: true,
+          minScale: 2.5,
+          maxScale: 2.5,
+          builder: (BuildContext context, Quad viewport) {
+            return GraphView(
+              graph: _graph!,
+              algorithm: BuchheimWalkerAlgorithm(
+                _builder!,
+                TreeEdgeRenderer(_builder!),
+              ),
+              builder: _buildNode,
+            );
+          });
     }
 
     final bottomSheet = DescriptorBottomSheet(
