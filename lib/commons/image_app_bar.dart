@@ -20,6 +20,20 @@ class ImageAppBar extends StatefulWidget {
 }
 
 class _ImageAppBarState extends State<ImageAppBar> {
+  static const _widthBound = 600.0;
+
+  double? _viewWidth;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    double screenWidth = MediaQuery.of(context).size.width;
+    if (screenWidth > _widthBound) {
+      _viewWidth = screenWidth * 2 / 3;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     ThemeData _theme = Theme.of(context);
@@ -39,7 +53,12 @@ class _ImageAppBarState extends State<ImageAppBar> {
 
     return Scaffold(
       body: NestedScrollView(
-          body: widget.child,
+          body: Center(
+            child: SizedBox(
+              width: _viewWidth,
+              child: widget.child,
+            ),
+          ),
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return [
               SliverAppBar(

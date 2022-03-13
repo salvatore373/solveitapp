@@ -116,7 +116,7 @@ class MinimalCard extends StatelessWidget {
 
     final content = Row(
       mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         if (icon != null || iconPath != null)
@@ -124,23 +124,21 @@ class MinimalCard extends StatelessWidget {
             padding: const EdgeInsets.only(right: 30.0),
             child: iconW,
           ),
-        Flexible(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: centeredText == true
-                ? CrossAxisAlignment.center
-                : CrossAxisAlignment.start,
-            children: [
-              titleW,
-              Flexible(
-                child: Container(
-                  padding: const EdgeInsets.only(top: 6.0),
-                  child: subtitleW,
-                ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: centeredText == true
+              ? CrossAxisAlignment.center
+              : CrossAxisAlignment.start,
+          children: [
+            titleW,
+            Flexible(
+              child: Container(
+                padding: const EdgeInsets.only(top: 6.0),
+                child: subtitleW,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ],
     );
@@ -155,6 +153,7 @@ class MinimalCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20.0),
         onTap: onTap,
         child: Container(
+          alignment: Alignment.center,
           padding: DimensConst.largeOverallPadding,
           child: content,
         ),
