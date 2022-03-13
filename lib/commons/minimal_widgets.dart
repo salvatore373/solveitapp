@@ -124,21 +124,23 @@ class MinimalCard extends StatelessWidget {
             padding: const EdgeInsets.only(right: 30.0),
             child: iconW,
           ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: centeredText == true
-              ? CrossAxisAlignment.center
-              : CrossAxisAlignment.start,
-          children: [
-            titleW,
-            Flexible(
-              child: Container(
-                padding: const EdgeInsets.only(top: 6.0),
-                child: subtitleW,
+        Flexible(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: centeredText == true
+                ? CrossAxisAlignment.center
+                : CrossAxisAlignment.start,
+            children: [
+              titleW,
+              Flexible(
+                child: Container(
+                  padding: const EdgeInsets.only(top: 6.0),
+                  child: subtitleW,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     );
