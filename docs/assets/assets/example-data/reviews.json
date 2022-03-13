@@ -1,0 +1,10 @@
+{
+  "reviews": {
+    "1a77f140-4ebf-44fe-9908-d798f856c063": {
+      "userId": "6c9a6f75-c607-4fa0-b1e0-4fb8ceef4b55",
+      "title": "Review Title",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida porta ullamcorper. Maecenas in ante sed magna tristique auctor at maximus orci. Aenean neque nibh, congue.",
+      "stars": 3
+    }
+  }
+}
